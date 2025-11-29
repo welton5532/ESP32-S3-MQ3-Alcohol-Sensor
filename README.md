@@ -1,5 +1,8 @@
 # Project: MQ-3 Alcohol Sensor with ESP32-S3
 
+<img width="1242" height="337" alt="image" src="https://github.com/user-attachments/assets/68d8a9e1-8138-4013-b2ad-08e3b36e44ff" />
+
+
 This project implements a high-precision alcohol concentration detector using the **MQ-3 Alcohol Gas Sensor** and the **Espressif ESP32-S3**.
 
 Unlike standard tutorials, this project uses a **custom calibration regression model** derived from the sensor datasheet and implements a specific **hardware impedance matching circuit** to safely interface the 5V sensor with the 3.3V ESP32 while strictly maintaining the required 4.7kΩ load resistance.
