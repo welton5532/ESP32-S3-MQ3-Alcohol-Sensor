@@ -96,19 +96,23 @@ ESP32-S3 GPIO 1 <----------------------+
 $$PPM = e^{\left(\frac{V_{RL} + 1.53338}{0.95387}\right)} - 9.84144$$
 
 <img width="490" height="558" alt="image" src="https://github.com/user-attachments/assets/a4f9b88e-bedc-4f11-bfe5-634a5eaa9edf" />
+
 Fig5.Sensitity Curve (https://www.winsen-sensor.com/product/mq-3b.html?campaign)
 
 <img width="400" height="389" alt="image" src="https://github.com/user-attachments/assets/c7eddc5e-7d66-4fb1-93b0-c62dd769651f" />
+
 Fig5.Sensitity Curve (CHT)
 
 
 <img width="892" height="892" alt="image" src="https://github.com/user-attachments/assets/33b6e736-a027-460a-9a6a-3252aa075b55" />
+
 manually extended curve
 
 ### Unit Conversion
 
 Based on the MQ-3 datasheet, the linear mapping for unit conversion is:
 $$1 \text{ mg/L} = 500 \text{ ppm}$$
+
 <img width="613" height="230" alt="image" src="https://github.com/user-attachments/assets/6cacc3f3-2e19-4a74-9d59-37f54c60223e" />
 
 -----
