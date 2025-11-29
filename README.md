@@ -8,15 +8,14 @@ Unlike standard tutorials, this project uses a **custom calibration regression m
   * **Sensor:** MQ-3 Alcohol Gas Sensor
   * **Output Units:** ppm (Parts Per Million) and mg/L
 
-![db7c7f0228bab3fd9818785e16ac8b42.png](:/39271814df8546439676dac750890ae1)
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/bec52f05-8b97-4bce-8c53-d855934ba9ff" />
 
-![89391db8b2bf1de82c1c1004a151c31a.png](:/48afeb473a7d46438b9fe74ad78bb14f)
+<img width="1024" height="682" alt="image" src="https://github.com/user-attachments/assets/5b4a83b1-a566-48ea-9203-aaa9dce450f2" />
 
-![3a018a01aa1aa3e1e931ecb09d77ae3d.png](:/06ce2f1724394b0bbc840c9804c98c48)
+<img width="1024" height="683" alt="image" src="https://github.com/user-attachments/assets/3d2d5a82-90eb-419c-9322-a01f0723bdea" />
 
-![9614928c565edc11299f9bfe8dd3baed.png](:/5e45e9a1d1874b5aacc4b30eaad73942)
+<img width="565" height="302" alt="image" src="https://github.com/user-attachments/assets/0ad59e01-34e9-4915-ae01-0889d0cb010c" />
 
-![d9cbf8b5e3bdb85990f4bc9dbdaebe11.png](:/4dd93d2d51624b338d5dbd18b5a8be49)
 
 -----
 
@@ -80,7 +79,8 @@ ESP32-S3 GPIO 1 <----------------------+
                                       GND
 ```
 
-![83e576cafebce8fda18329a49be317c6.png](:/a4b4487fe6f94b7cabc86ee8dc53812e)
+<img width="1075" height="767" alt="image" src="https://github.com/user-attachments/assets/1adf7f7b-b48b-4716-9905-c7588c01a989" />
+
 
 -----
 
@@ -94,22 +94,22 @@ ESP32-S3 GPIO 1 <----------------------+
 3.  **Regression:** A custom exponential regression formula was derived to convert Voltage ($V_{RL}$) to Concentration (ppm).
 
 $$PPM = e^{\left(\frac{V_{RL} + 1.53338}{0.95387}\right)} - 9.84144$$
-![e7714cb262a74a1ca1416d12db2e9881.png](:/a819964f2f2d406b954b8660ff7cb0dc)
+
+<img width="490" height="558" alt="image" src="https://github.com/user-attachments/assets/a4f9b88e-bedc-4f11-bfe5-634a5eaa9edf" />
 Fig5.Sensitity Curve (https://www.winsen-sensor.com/product/mq-3b.html?campaign)
 
-![be2c6208a62f7e4e9e24384ef884cda6.png](:/f507e6726c6b42c4b3469ed2459ba0cf)
+<img width="400" height="389" alt="image" src="https://github.com/user-attachments/assets/c7eddc5e-7d66-4fb1-93b0-c62dd769651f" />
 Fig5.Sensitity Curve (CHT)
 
 
-![10c78c5c2813fd05bf2aa7947baa579e.png](:/edbf30ec823241348ed0b2bf7d80e770)
+<img width="892" height="892" alt="image" src="https://github.com/user-attachments/assets/33b6e736-a027-460a-9a6a-3252aa075b55" />
 manually extended curve
 
 ### Unit Conversion
 
 Based on the MQ-3 datasheet, the linear mapping for unit conversion is:
 $$1 \text{ mg/L} = 500 \text{ ppm}$$
-
-![9770e1c955b6a85366d1354da79acda3.png](:/9b2eb873d51a4a5895617f0fc86d4c15)
+<img width="613" height="230" alt="image" src="https://github.com/user-attachments/assets/6cacc3f3-2e19-4a74-9d59-37f54c60223e" />
 
 -----
 
