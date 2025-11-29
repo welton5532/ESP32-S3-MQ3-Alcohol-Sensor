@@ -1,0 +1,37 @@
+#include <Arduino.h>
+#include <math.h>
+
+#define SENSOR_PIN 1  // GPIO1 for analog input (ADC1_CH0)
+
+void setup() {
+  Serial.begin(115200);
+}
+// !!!! Linear Formula, not Accurate
+// (0.19V~4.06v) (0.05mg/L—10mg/L Alcohol) (threshold: 0.15mg/L)
+// Formula: mg/L ≈ 2.571 * Vout - 0.4385.
+void loop() {
+  int RL = 1500;
+  float R0 = 20000.0;
+  float sensorValue = 0.0;
+  float sensor_volt = 0.0;
+  float mg_L = 0.0;
+  // Average 100 readings for stability
+  for (int i = 0; i < 100; i++) {
+    sensorValue += analogRead(SENSOR_PIN);
+    delay(5);
+  }
+  sensorValue /= 100.0;
+
+  // Calculate MQ3 AO voltage (1k/2k divider: multiplier 1.5)
+  sensor_volt = (sensorValue / 4095.0) * 3.3 * 1.5;
+  
+  mg_L = (2.571 * sensor_volt) - 0.4385;
+  // Print results
+  Serial.print("ADC: "); Serial.print(sensorValue, 0);
+  Serial.print(" | V: "); Serial.print(sensor_volt, 2); Serial.print("V");
+  Serial.print(" | mg/L = ");
+  Serial.println(mg_L);
+  Serial.println("---");
+  
+  delay(2000);
+}
