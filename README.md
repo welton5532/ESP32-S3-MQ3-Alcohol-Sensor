@@ -18,7 +18,7 @@ Unlike standard tutorials, this project uses a **custom calibration regression m
 <img width="1024" height="683" alt="image" src="https://github.com/user-attachments/assets/3d2d5a82-90eb-419c-9322-a01f0723bdea" />
 
 <img width="565" height="302" alt="image" src="https://github.com/user-attachments/assets/0ad59e01-34e9-4915-ae01-0889d0cb010c" />
-
+In order to match MQ-3 sensitivity curve, R2 should change to 4.7k Ohm (+ 75 OHM [= 4775 Ohm] if using 300k Ohm Voltage divider.)
 
 -----
 
